@@ -31,6 +31,7 @@ portfolio-btn Roboto Weight 500
   --primary-white-color: #ffffff;
   --secondary-background-color: #f5f4fa;
   --background-color-add: #2f303a;
+  --project-card-gap: 30px;
 }
 
 body {
@@ -39,14 +40,54 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* Header */
 .item {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .link {
   text-decoration: none;
   font-style: normal;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.container-header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ececec;
+  display: flex;
+  align-items: center;
+}
+
+/* Header */
 
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -56,10 +97,22 @@ body {
   line-height: 1.19;
   text-decoration: none;
   color: var(--text-color);
+  margin-right: 93px;
 }
 
 .logo span {
   color: var(--accent-color);
+}
+.site-nav-list {
+  display: flex;
+  align-items: center;
+}
+.nav {
+  display: flex;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .nav-link,
@@ -78,6 +131,14 @@ body {
 .nav .nav-link.current {
   color: var(--accent-color);
 }
+.auth-nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.auth-nav-item:not(:first-child) {
+  margin-left: 50px;
+}
 
 .auth-nav-link {
   color: var(--text-color-add);
@@ -91,17 +152,16 @@ body {
 /* Hero section */
 .hero {
   background-color: var(--background-color-add);
- 
+  text-align: center;
 }
 .hero-tittle {
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--primary-white-color);
-  text-align: center;  
 }
 
 .hero-btn {
@@ -109,21 +169,16 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
-  display: block;
+  display: inline-block;
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   border: none;
-  text-align: center;
-  height: 50px;
-  width: 200px;
+  min-width: 200px;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  margin: 0 auto;
+  padding: 10px 32px;
 }
 
 .hero-btn:hover,
@@ -131,8 +186,21 @@ body {
   background-color: #188ce8;
 }
 /* Particular section */
+.particular-container {
+  padding-bottom: 0px;
+}
 .section {
   background-color: var(--primary-white-color);
+}
+.particular-list {
+  display: flex;
+}
+.particular-item {
+  margin-right: 30px;
+}
+
+.particular-item:last-child {
+  margin-right: 0;
 }
 
 .section-tittle {
@@ -141,9 +209,7 @@ body {
   line-height: 1.17;
   text-align: center;
   color: var(--text-color);
-}
-.particular>.section-tittle{
-  display: none;
+  margin-bottom: 50px;
 }
 
 .particular-tittle {
@@ -152,6 +218,7 @@ body {
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--text-color);
+  margin-bottom: 10px;
 }
 
 .particular-text {
@@ -161,18 +228,40 @@ body {
 }
 
 /* Works-section */
+.works-list {
+  display: flex;
+  justify-content: center;
+}
+
+.work-item:not(:last-child) {
+  margin-right: 30px;
+}
 
 /* Command section */
 .command {
   background-color: var(--secondary-background-color);
 }
 
+.command-list {
+  display: flex;
+}
+
 .command-card {
-  display: block;
+  min-width: 270px;
+  padding-bottom: 30px;
   background-color: var(--primary-white-color);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);  
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-right: 30px;
+}
+
+.command-card:last-child {
+  margin-right: 0;
+}
+.command-jpg {
+  margin-bottom: 30px;
 }
 
 .command-tittle {
@@ -180,6 +269,7 @@ body {
   font-size: 16px;
   line-height: 1.19;
   color: var(--text-color);
+  margin-bottom: 10px;
 }
 .command-text {
   font-size: 16px;
@@ -188,11 +278,18 @@ body {
 }
 
 /* Footer */
+.container-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .footer {
   background-color: var(--background-color-add);
 }
 
 .logo-footer {
+  display: inline-block;
+  margin-bottom: 20px;
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
@@ -207,6 +304,8 @@ body {
 
 .footer .address {
   color: var(--primary-white-color);
+  display: inline-block;
+  margin-bottom: 10px;
 }
 .footer .mail,
 .footer .tel {
@@ -214,23 +313,38 @@ body {
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
 }
-
-/* Portfolio */
-.portfolio-tittle {
-  display: none;
+.footer .mail {
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
+/* Portfolio */
+
 /* Filtr */
+.filtr {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.filtr-item {
+  margin-right: 8px;
+}
+
+.filtr-item:last-child {
+  margin-right: 0;
+}
+
 .filtr-btn {
   font-family: Roboto;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  text-align: center
-    background-color: var(--secondary-background-color);
+  text-align: center;
+  background-color: var(--secondary-background-color);
   border: none;
   border-radius: 4px;
   color: var(--text-color);
+  padding: 6px 22px;
 }
 
 .filtr-btn:hover,
@@ -243,9 +357,23 @@ body {
 }
 
 /* Projects */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--project-card-gap));
+  margin-left: calc(-1 * var(--project-card-gap));
+}
 .projects-card {
   background-color: var(--primary-white-color);
-   border: 1px solid #eeeeee;
+  margin-left: var(--project-card-gap);
+  margin-top: var(--project-card-gap);
+  flex-basis: calc(100% / 3 - var(--project-card-gap));
+}
+
+.card-tittle {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
 }
 
 .projects-tittle {
@@ -254,6 +382,7 @@ body {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--text-color);
+  margin-bottom: 4px;
 }
 
 .projects-text {
