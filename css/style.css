@@ -66,7 +66,8 @@ ul {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
@@ -75,18 +76,24 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 94px;
-  padding-bottom: 94px;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 /* Header */
 
 .header {
   border-bottom: 1px solid #ececec;
-}
-.container-header {
   padding-top: 24px;
   padding-bottom: 25px;
+}
+.container-header {
   display: flex;
   align-items: center;
 }
@@ -155,6 +162,8 @@ img {
 .hero {
   background-color: var(--background-color-add);
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero-tittle {
   margin-bottom: 30px;
@@ -188,11 +197,13 @@ img {
   background-color: #188ce8;
 }
 /* Particular section */
-.particular-container {
-  padding-bottom: 0px;
-}
 .section {
-  background-color: var(--primary-white-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.particular {
+  padding-bottom: 0;
 }
 .particular-list {
   display: flex;
@@ -249,8 +260,6 @@ img {
 }
 
 .command-card {
-  min-width: 270px;
-  padding-bottom: 30px;
   background-color: var(--primary-white-color);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -262,8 +271,9 @@ img {
 .command-card:last-child {
   margin-right: 0;
 }
-.command-jpg {
-  margin-bottom: 30px;
+
+.command-card-tittle {
+  margin: 30px 0;
 }
 
 .command-tittle {
@@ -280,13 +290,11 @@ img {
 }
 
 /* Footer */
-.container-footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
 
 .footer {
   background-color: var(--background-color-add);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .logo-footer {
@@ -304,20 +312,18 @@ img {
   color: var(--accent-color);
 }
 
+.adress-list-item:not(:last-child) {
+  margin-bottom: 9px;
+}
 .footer .address {
   color: var(--primary-white-color);
-  display: inline-block;
-  margin-bottom: 10px;
 }
+
 .footer .mail,
 .footer .tel {
   font-size: 14px;
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
-}
-.footer .mail {
-  display: inline-block;
-  margin-bottom: 10px;
 }
 
 /* Portfolio */
@@ -369,7 +375,6 @@ img {
   background-color: var(--primary-white-color);
   margin-left: var(--project-card-gap);
   margin-top: var(--project-card-gap);
-  flex-basis: calc(100% / 3 - var(--project-card-gap));
 }
 
 .card-tittle {
